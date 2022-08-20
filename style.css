@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 h1{font-size: 3,5em;}
 h2{ font-size: 2.7em;}
 h3{ font-size: 2em;}
@@ -18,15 +22,18 @@ body {
 }
 
 header{
-    background-color: rgb(41, 40, 40);
+    background-color: rgba(30,30,30);
+    
 }
 
 header .logo{
     margin: 0;
     padding: 25px 30px;
-    color:rgba(239, 41, 206);
+    color:#1ecece;
     font-size: 1.6em;
-    font-weight: bold;
+   font-size: bold;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
     
 }
 
@@ -41,6 +48,7 @@ header nav{
     flex-direction: column;
     text-align: center;
     padding-bottom: 25px;
+    
 }
 
 header a{
@@ -50,7 +58,7 @@ header a{
     color: rgb(255, 255, 255);
 }
 header a:hover{
-    color: rgba(177, 78, 255);
+    color: #1bacac;
 }
 
 #hero{
@@ -59,7 +67,7 @@ header a:hover{
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    height: 90vh;
+    height: 70vh;
     color: rgb(210, 180, 222);
     background-image: linear-gradient(
         0deg,
@@ -76,4 +84,154 @@ header a:hover{
 #nuestros-eventos{
     color:rgba(239, 41, 206) ;
     background-color:rgb(41, 40, 40) ;
+    font-family: 'Prompt', sans-serif;
+}
+
+#quienes-somos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 200px 12px;
+    background-color: rgba(30,30,30);
+    color:#1ecece ;
+    font-family: 'Lato', sans-serif;
+    
+
+    
+}
+
+#quienes-somos p{
+    margin: 0;
+    color: wheat;
+}
+
+
+
+#stands{
+    background-color: rgba(30,30,30);
+    color: #58e753;
+    text-align: center;
+    font-family: 'Prompt', sans-serif;
+}
+
+#stands .contenedor{
+    padding: 150px 0px;
+}
+
+#stands h2{
+    margin-top: 0;
+    font-size: 3em;
+}
+
+#stands .carta{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px;
+    margin: 20px;
+    border-radius: 15px;
+    color: #58e753;
+
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+    ,url("images/stand-1.PNG");
+    color: wheat;
+ 
+
+}
+
+.carta:last-child{
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+        )
+    ,url("images/stand-2.PNG");
+    color: wheat;
+}
+
+footer{
+    background-color: rgb(63, 63, 63);
+}
+
+footer p{
+    margin: 0;
+    color: rgba(100,100,100);
+    padding: 15px;
+}
+
+footer .contenedor{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media (min-width: 720px){
+
+    header .contenedor{
+        flex-direction: row;
+        justify-content: space-between;
+        
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0px;
+        padding-right: 15px;
+        
+    }
+
+    #quienes-somos {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    #quienes-somos .texto{
+        width: 50%;
+        text-align: initial;
+        padding: 0px 30px;
+        justify-content: center;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #quienes-somos h2{
+        margin-top: 0px;
+    }
+
+    #quienes-somos .img-contenedor{
+       background-image: url("images/logo.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 500px;
+        width: 400px;
+    }
+
+    #stands .nuestros-stands{
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #stands .p{
+        display: block;
+    }
+
+    #stands .carta{
+        padding: 15px;
+        margin-bottom: 50px;
+    }
+
+    #stands h3{
+        margin-top: 0;
+    }
 }
